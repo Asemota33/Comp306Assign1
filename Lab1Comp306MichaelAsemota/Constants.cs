@@ -8,8 +8,8 @@ namespace Lab1Comp306MichaelAsemota
 {
     public static class Constants
     {
-        public static readonly string ACCESSKEY = "AKIAWWZ4CDQ2YYT2ID3V";
-        public static readonly string SECRETKEY = "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";
+        public static readonly string ACCESSKEY = "";
+        public static readonly string SECRETKEY = "";
 
     }
 }
