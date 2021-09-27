@@ -29,7 +29,14 @@ namespace Lab1Comp306MichaelAsemota
 
         private void Bucket_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            populateObjectGrid();
+            try
+            {
+                populateObjectGrid();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private async void populateDropDownBox()
@@ -123,6 +130,17 @@ namespace Lab1Comp306MichaelAsemota
                 }
 
             }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            App.mainWindow.Show();
+            this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

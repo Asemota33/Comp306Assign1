@@ -13,5 +13,15 @@ namespace Lab1Comp306MichaelAsemota
     /// </summary>
     public partial class App : Application
     {
+        public static CreateBucket createBucket;
+        public static MainWindow mainWindow;
+        public static ObjectLevelOperations objectLevelOperations;
+
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            createBucket = new CreateBucket();
+            mainWindow = new MainWindow();
+            objectLevelOperations = new ObjectLevelOperations();
+        }
     }
 }

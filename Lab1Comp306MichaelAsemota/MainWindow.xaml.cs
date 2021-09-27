@@ -27,8 +27,10 @@ namespace Lab1Comp306MichaelAsemota
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            CreateBucket createBucketWindow = new CreateBucket();
-            createBucketWindow.Show();
+            //CreateBucket createBucketWindow = new CreateBucket();
+            //createBucketWindow.Show();
+            App.createBucket.Show();
+            this.Hide();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -38,8 +40,15 @@ namespace Lab1Comp306MichaelAsemota
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            ObjectLevelOperations objectLevelOperationsWindow = new ObjectLevelOperations();
-            objectLevelOperationsWindow.Show();
+            //ObjectLevelOperations objectLevelOperationsWindow = new ObjectLevelOperations();
+            //objectLevelOperationsWindow.Show();
+            App.objectLevelOperations.Show();
+            this.Hide();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

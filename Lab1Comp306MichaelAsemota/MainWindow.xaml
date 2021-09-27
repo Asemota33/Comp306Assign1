@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab1Comp306MichaelAsemota"
         mc:Ignorable="d"
-        Title="MainWindow" Height="293" Width="800">
+        Title="MainWindow" Height="293" Width="800"
+        Closing="Window_Closing">
     <Grid>
         <Button Content="Create Bucket" HorizontalAlignment="Left" Margin="82,92,0,0" VerticalAlignment="Top" Width="124" Height="56" Click="Button_Click"/>
         <Button Content="Object Level Operations" HorizontalAlignment="Left" Margin="303,92,0,0" VerticalAlignment="Top" Width="155" Height="56" RenderTransformOrigin="0.298,0.536" Click="Button_Click_2"/>

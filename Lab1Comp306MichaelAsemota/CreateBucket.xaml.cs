@@ -35,17 +35,26 @@ namespace Lab1Comp306MichaelAsemota
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            App.mainWindow.Show();
+            this.Hide();
         }
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var s3Client = new AmazonS3Client(Constants.ACCESSKEY, Constants.SECRETKEY, bucketRegion);
-            var response = await s3Client.PutBucketAsync(new PutBucketRequest
+            try
             {
-                BucketName = bucketNameInput.Text
-            });
-            populateTable();
+                var s3Client = new AmazonS3Client(Constants.ACCESSKEY, Constants.SECRETKEY, bucketRegion);
+                var response = await s3Client.PutBucketAsync(new PutBucketRequest
+                {
+                    BucketName = bucketNameInput.Text
+                });
+                populateTable();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private async void populateTable()
@@ -59,6 +68,11 @@ namespace Lab1Comp306MichaelAsemota
                     bucketsFromS3.Add(bucket);
                 }
             }
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

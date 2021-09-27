@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab1Comp306MichaelAsemota"
         mc:Ignorable="d"
-        Title="CreateBucket" Height="450" Width="800">
+        Title="CreateBucket" Height="450" Width="800"
+        Closing="Window_Closing">
     <Grid>
         <TextBox Name="bucketNameInput" HorizontalAlignment="Left" Height="23" Margin="207,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349"/>
         <Label Content="Bucket Name" HorizontalAlignment="Left" Margin="97,45,0,0" VerticalAlignment="Top" Height="29" Width="105"/>
